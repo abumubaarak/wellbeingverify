@@ -13,7 +13,7 @@ export const colors = {
   primaryLight: '#E6F9DF',
   line: '#DEE3DF',
   white: '#ffffff',
-  black: '#181D17',
+  black: '#000',
   darkLight: '#161528',
   greyLight: '#C5C7C5',
   greyLight2: '#EEEEEE',

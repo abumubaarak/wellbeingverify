@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {Home} from '../screens';
+import {Home, ImageViewer} from '../screens';
 import {Details} from '../screens/Details';
 import {AppStackParamList} from './AppStackParamList';
 export const AppStack = () => {
@@ -14,6 +14,7 @@ export const AppStack = () => {
       }}>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Details" component={Details} />
+      <Stack.Screen name="ImageViewer" component={ImageViewer} />
     </Stack.Navigator>
   );
 };

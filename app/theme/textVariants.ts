@@ -20,7 +20,7 @@ export const textVariants = {
     fontFamily: 'WorkSans-Medium',
     fontSize: moderateScale(13),
   },
-  buttonLabel: {
+  semiBold: {
     fontFamily: 'WorkSans-SemiBold',
   },
   mSemiBold: {

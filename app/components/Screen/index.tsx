@@ -26,7 +26,7 @@ export const Screen = ({
 }: ScreenProps) => {
   const insets = useSafeAreaInsets();
   const PADDING_TOP = isAndroid ? 0 : insets.top;
-  const PADDING_BOTTOM = isAndroid ? 10 : insets.bottom;
+  const PADDING_BOTTOM = isAndroid ? 10 : insets.bottom - 50;
   const DEFAULT_PADDING_BOTTOM = 0;
   return (
     <Box

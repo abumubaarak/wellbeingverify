@@ -20,7 +20,7 @@ export const Dismiss = ({wnh = 40, title}: DismissProps) => {
   }, [navigation]);
 
   return (
-    <Box flexDirection="row" justifyContent="center" alignItems="center">
+    <Box flexDirection="row" justifyContent="center" alignItems="center" pb="s">
       <Box style={[$container, $widthHeightStyle(wnh)]}>
         <Pressable
           hitSlop={50}
