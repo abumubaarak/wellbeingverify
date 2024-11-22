@@ -22,6 +22,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A49634128E874D7F9E7C4AB2 /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C477F7F231A44F9A8B1C12BF /* WorkSans-SemiBold.ttf */; };
 		BD1ECBE36F418FE2B13BF9CA /* Pods_wellbeingVerify_wellbeingVerifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963A4584DB661A77E38CEFE6 /* Pods_wellbeingVerify_wellbeingVerifyTests.framework */; };
+		FC422A2B2CF07CC500EDD563 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC422A2A2CF07CC500EDD563 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,17 +50,18 @@
 		3B4392A12AC88292D35C810B /* Pods-wellbeingVerify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wellbeingVerify.debug.xcconfig"; path = "Target Support Files/Pods-wellbeingVerify/Pods-wellbeingVerify.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-wellbeingVerify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wellbeingVerify.release.xcconfig"; path = "Target Support Files/Pods-wellbeingVerify/Pods-wellbeingVerify.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-wellbeingVerify-wellbeingVerifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wellbeingVerify-wellbeingVerifyTests.debug.xcconfig"; path = "Target Support Files/Pods-wellbeingVerify-wellbeingVerifyTests/Pods-wellbeingVerify-wellbeingVerifyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		69EEE073EEAF4CE2868BF4BF /* MontserratAlternates-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MontserratAlternates-SemiBold.ttf"; path = "../app/assets/fonts/MontserratAlternates-SemiBold.ttf"; sourceTree = "<group>"; };
-		6D2D44D455C24335BB7B13F5 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MontserratAlternates-Regular.ttf"; path = "../app/assets/fonts/MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
-		6DAE181E246D4587886DC50C /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Regular.ttf"; path = "../app/assets/fonts/WorkSans-Regular.ttf"; sourceTree = "<group>"; };
-		7BC94C9ED57D4DE9A0487EA2 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Light.ttf"; path = "../app/assets/fonts/WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		69EEE073EEAF4CE2868BF4BF /* MontserratAlternates-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MontserratAlternates-SemiBold.ttf"; path = "../app/assets/fonts/MontserratAlternates-SemiBold.ttf"; sourceTree = "<group>"; };
+		6D2D44D455C24335BB7B13F5 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MontserratAlternates-Regular.ttf"; path = "../app/assets/fonts/MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
+		6DAE181E246D4587886DC50C /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Regular.ttf"; path = "../app/assets/fonts/WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		7BC94C9ED57D4DE9A0487EA2 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Light.ttf"; path = "../app/assets/fonts/WorkSans-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = wellbeingVerify/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-wellbeingVerify-wellbeingVerifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wellbeingVerify-wellbeingVerifyTests.release.xcconfig"; path = "Target Support Files/Pods-wellbeingVerify-wellbeingVerifyTests/Pods-wellbeingVerify-wellbeingVerifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		963A4584DB661A77E38CEFE6 /* Pods_wellbeingVerify_wellbeingVerifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wellbeingVerify_wellbeingVerifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C477F7F231A44F9A8B1C12BF /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-SemiBold.ttf"; path = "../app/assets/fonts/WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		CF1ABFC042CE4BCA936CEB03 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MontserratAlternates-Bold.ttf"; path = "../app/assets/fonts/MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
+		C477F7F231A44F9A8B1C12BF /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-SemiBold.ttf"; path = "../app/assets/fonts/WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		CF1ABFC042CE4BCA936CEB03 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MontserratAlternates-Bold.ttf"; path = "../app/assets/fonts/MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F2E4D72EF6E546C4B63DE205 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Medium.ttf"; path = "../app/assets/fonts/WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		F2E4D72EF6E546C4B63DE205 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Medium.ttf"; path = "../app/assets/fonts/WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		FC422A2A2CF07CC500EDD563 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		13B07FAE1A68108700A75B9A /* wellbeingVerify */ = {
 			isa = PBXGroup;
 			children = (
+				FC422A2A2CF07CC500EDD563 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -125,7 +128,6 @@
 				C477F7F231A44F9A8B1C12BF /* WorkSans-SemiBold.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -280,6 +282,7 @@
 				2CAB6C67227A1F1BDB89148C /* PrivacyInfo.xcprivacy in Resources */,
 				57877256CF9E4170A672757D /* MontserratAlternates-Bold.ttf in Resources */,
 				6125C91686234FBC95AAF55D /* MontserratAlternates-Regular.ttf in Resources */,
+				FC422A2B2CF07CC500EDD563 /* GoogleService-Info.plist in Resources */,
 				76B23D2B129043E2A42DC08B /* MontserratAlternates-SemiBold.ttf in Resources */,
 				5EFFFE3DDD7949D1893D5B3D /* WorkSans-Light.ttf in Resources */,
 				3729197DAEA84571A7E02642 /* WorkSans-Medium.ttf in Resources */,

@@ -4,20 +4,22 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {AppStack} from './navigation/AppStack';
-import { theme, colors } from './theme';
-
+import {colors, theme} from './theme';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 function App(): React.JSX.Element {
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
+    <GestureHandlerRootView>
+      <ThemeProvider theme={theme}>
+        <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
 
-      <SafeAreaProvider>
-        <NavigationContainer>
-          <AppStack />
-        </NavigationContainer>
-      </SafeAreaProvider>
-    </ThemeProvider>
+        <SafeAreaProvider>
+          <NavigationContainer>
+            <AppStack />
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }
 

@@ -1,22 +1,39 @@
-import {useNavigation} from '@react-navigation/native';
-import React from 'react';
-import {Button} from 'react-native';
-import {Box, Screen, Text} from '../../components';
-import {StackNavigation} from '../../navigation/AppStackParamList';
+import {FlashList} from '@shopify/flash-list';
+import React, {useEffect} from 'react';
+import {Box, ListItem, Screen, Text} from '../../components';
+import {CircularLoader} from '../../components/Loader';
+import {useFirestore} from '../../hooks';
 import {moderateScale} from '../../utils';
 
 export const Home = () => {
-  const navigation = useNavigation<StackNavigation>();
-  const onPress = () => {
-    navigation.navigate('Details');
-  };
+  const {data, isLoading, pendingVerificationDoctor} = useFirestore();
+
+  useEffect(() => {
+    (async () => {
+      await pendingVerificationDoctor();
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Screen useAlignment>
-      <Box mt="ll">
+      <Box mt="ll" flex={1}>
         <Text variant="mSemiBold" fontSize={moderateScale(32)}>
           {'Pending\nVerification'}
         </Text>
-        <Button title="Details" onPress={onPress} />
+        <Box mt="ml" flex={1}>
+          {isLoading ? (
+            <Box flex={1} alignItems="center" justifyContent="center">
+              <CircularLoader isLoading={true} />
+            </Box>
+          ) : (
+            <FlashList
+              data={data}
+              estimatedItemSize={200}
+              renderItem={({item}) => <ListItem item={item} />}
+            />
+          )}
+        </Box>
       </Box>
     </Screen>
   );
