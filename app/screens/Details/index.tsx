@@ -1,17 +1,20 @@
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
-import React from 'react';
-import {Pressable, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {ActivityIndicator, Pressable, ScrollView} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {Box, DetailsItem, Dismiss, Screen, Text} from '../../components';
 import {AppStackParamList, StackNavigation} from '../../navigation';
+import socket from '../../services/socket';
+import {colors} from '../../theme';
 import {spacing} from '../../theme/spacing';
-import {moderateScale} from '../../utils';
+import {delay, moderateScale} from '../../utils';
 import {$button, $container, $image} from '../styles';
 
 export const Details = () => {
   const navigation = useNavigation<StackNavigation>();
   const {params} = useRoute<RouteProp<AppStackParamList, 'Details'>>();
   const {doctor} = params;
+  const [isLoading, setLoading] = useState(false);
 
   const onPress = (position: number) => {
     navigation.navigate('ImageViewer', {
@@ -19,9 +22,51 @@ export const Details = () => {
       startAt: position,
     });
   };
+  const goBack = async () => {
+    await delay(2000);
+    setLoading(false);
+    navigation.goBack();
+  };
+
+  const accept = async () => {
+    setLoading(true);
+
+    socket.emit(
+      'accept',
+      {
+        doctorID: doctor.uid,
+      },
+      async (response: any) => {
+        const {sent} = response;
+        if (sent) {
+          await goBack();
+        }
+      },
+    );
+  };
+
+  const reject = () => {
+    setLoading(true);
+
+    socket.emit(
+      'reject',
+      {
+        doctorID: doctor.uid,
+      },
+      async (response: any) => {
+        const {sent} = response;
+        if (sent) {
+          await goBack();
+        }
+      },
+    );
+  };
   return (
     <Screen backgroundColor="grey">
-      <Box flex={1} paddingHorizontal="l">
+      <Box
+        flex={1}
+        paddingHorizontal="l"
+        pointerEvents={isLoading ? 'none' : 'auto'}>
         <Dismiss title="Doctor Information" />
         <ScrollView style={$container}>
           <Box mt="l" flex={1} gap="l" pb="ll">
@@ -70,28 +115,48 @@ export const Details = () => {
           borderTopLeftRadius={10}
           paddingVertical="l"
           justifyContent="flex-end">
-          <Box
-            flex={1}
-            backgroundColor="error"
-            height={55}
-            borderRadius={spacing.n}
-            justifyContent="center"
-            alignItems="center">
-            <Text color="white" variant="mBold" fontSize={moderateScale(15)}>
-              Reject
-            </Text>
-          </Box>
-          <Box
-            flex={1}
-            backgroundColor="black"
-            height={55}
-            borderRadius={spacing.n}
-            justifyContent="center"
-            alignItems="center">
-            <Text color="white" variant="mBold" fontSize={moderateScale(15)}>
-              Accept
-            </Text>
-          </Box>
+          {isLoading ? (
+            <Box flex={1} alignItems="center" pt="n">
+              <ActivityIndicator color={colors.black} />
+            </Box>
+          ) : (
+            <>
+              <Pressable style={$container} onPress={reject}>
+                <Box
+                  backgroundColor="error"
+                  height={55}
+                  borderRadius={spacing.n}
+                  justifyContent="center"
+                  alignItems="center">
+                  <Text
+                    color="white"
+                    variant="mBold"
+                    fontSize={moderateScale(15)}>
+                    Reject
+                  </Text>
+                </Box>
+              </Pressable>
+              <Pressable style={$container} onPress={accept}>
+                <Box
+                  backgroundColor={isLoading ? 'inputStroke' : 'black'}
+                  height={55}
+                  borderRadius={spacing.n}
+                  justifyContent="center"
+                  alignItems="center">
+                  {isLoading ? (
+                    <ActivityIndicator color={colors.black} />
+                  ) : (
+                    <Text
+                      color="white"
+                      variant="mBold"
+                      fontSize={moderateScale(15)}>
+                      Accept
+                    </Text>
+                  )}
+                </Box>
+              </Pressable>
+            </>
+          )}
         </Box>
       </Box>
     </Screen>

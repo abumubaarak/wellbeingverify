@@ -1,3 +1,4 @@
+import {useIsFocused} from '@react-navigation/native';
 import {FlashList} from '@shopify/flash-list';
 import React, {useEffect} from 'react';
 import {Box, ListItem, Screen, Text} from '../../components';
@@ -7,13 +8,16 @@ import {moderateScale} from '../../utils';
 
 export const Home = () => {
   const {data, isLoading, pendingVerificationDoctor} = useFirestore();
+  const isFocus = useIsFocused();
 
   useEffect(() => {
-    (async () => {
-      await pendingVerificationDoctor();
-    })();
+    if (isFocus) {
+      (async () => {
+        await pendingVerificationDoctor();
+      })();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isFocus]);
 
   return (
     <Screen useAlignment>
