@@ -3522,7 +3522,7 @@ SPEC CHECKSUMS:
   lottie-react-native: 1ef21efc2d9567bf59506bf16b8d9e4520d4beb3
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
-  RCT-Folly: 84578c8756030547307e4572ab1947de1685c599
+  RCT-Folly: bf5c0376ffe4dd2cf438dcf86db385df9fdce648
   RCTDeprecation: d575d28132f93e5deef4849d5afffb4ac4e63226
   RCTRequired: e2e5df1df76aac8685aabfebca389e6bec64792b
   RCTTypeSafety: 30e36ceafa26979860e13fb3f234fb61692924c2
