@@ -11,6 +11,7 @@ export const AppStack = () => {
       initialRouteName="Home"
       screenOptions={{
         headerShown: false,
+
       }}>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Details" component={Details} />

@@ -11,5 +11,31 @@ const horizontalScale = (size: number) => (width / guidelineBaseWidth) * size;
 const verticalScale = (size: number) => (height / guidelineBaseHeight) * size;
 const moderateScale = (size: number, factor = 0.5) =>
   size + (horizontalScale(size) - size) * factor;
+export function delay(duration: number) {
+  return new Promise(resolve => setTimeout(resolve, duration));
+}
+export const MONTH_NAMES = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+export const formatDate = (dob: Date) => {
+  if (!dob || (dob instanceof Date && isNaN(dob.getTime()))) {
+    return ' ';
+  }
+  const dateObj = new Date(dob);
 
+  return `${
+    MONTH_NAMES[dateObj.getMonth()]
+  } ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+};
 export {horizontalScale, moderateScale, verticalScale};
