@@ -15,7 +15,7 @@ export const ImageViewer = () => {
 
   return (
     <Box zIndex={1} flex={1} backgroundColor="black">
-      <Box zIndex={10} position="absolute" top={insets.top}>
+      <Box zIndex={10} position="absolute" top={insets.top} left={10}>
         <Dismiss />
       </Box>
       <Gallery
