@@ -7,7 +7,7 @@ import {AppStackParamList, StackNavigation} from '../../navigation';
 import socket from '../../services/socket';
 import {colors} from '../../theme';
 import {spacing} from '../../theme/spacing';
-import {delay, moderateScale} from '../../utils';
+import {delay, formatDate, moderateScale} from '../../utils';
 import {$button, $container, $image} from '../styles';
 
 export const Details = () => {
@@ -74,7 +74,7 @@ export const Details = () => {
             <DetailsItem title="Email" value={doctor.email} />
             <DetailsItem title="Gender" value={doctor.gender} />
             <DetailsItem dl={true} title="Bio" value={doctor.bio} />
-            <DetailsItem title="DOB" value={doctor.dob} />
+            <DetailsItem title="DOB" value={formatDate(doctor.dob)} />
             <DetailsItem title="Specialty" value={doctor.specialty} />
             <Box>
               <Text variant="medium" fontSize={moderateScale(15)}>
